@@ -18,7 +18,7 @@ We utilize a **hybrid distributed architecture** that balances fast local intera
 |    |                  |                   | - TTS: gTTS / pyttsx3 offline |    |
 |    +--------+---------+                   +-------------------------------+    |
 +-------------|------------------------------------------------------------------+
-              | (Fast HTTP JSON over local network)
+              | (Fast HTTP JSON over public zrok tunnel)
               v
 +-------------|------------------------------------------------------------------+
 |                            n8n WORKFLOW BACKEND                                |
