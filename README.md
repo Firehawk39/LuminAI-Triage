@@ -60,19 +60,21 @@ Every patient interaction is automatically categorized into one of three distinc
 ### 1. Install Dependencies
 Ensure you have Python 3.10+ installed. It is highly recommended to create a virtual environment (using `venv` or `conda`) before installing the required client voice and network libraries.
 
-**Using venv:**
+**💻 FOR WINDOWS USERS:**
 ```powershell
 python -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Using conda:**
-```powershell
-conda create -n luminai python=3.10
-conda activate luminai
-pip install -r requirements.txt
+**🍎 FOR MAC / LINUX USERS:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
 ```
+
+*(Note: If you prefer Conda, you can use `conda create -n luminai python=3.10` and `conda activate luminai` instead of venv).*
 
 ### 2. Launch the Gradio Interface
 Run the main Python application:
