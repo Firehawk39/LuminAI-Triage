@@ -58,30 +58,32 @@ Every patient interaction is automatically categorized into one of three distinc
 ## 🛠️ Step-by-Step Installation & Run Guide
 
 ### 1. Install Dependencies
-Ensure you have Python 3.10+ installed. It is highly recommended to create a virtual environment (using `venv` or `conda`) before installing the required client voice and network libraries.
+Ensure you have Python 3.10+ installed. Open your terminal in this directory and install the required client libraries:
 
 **💻 FOR WINDOWS USERS:**
 ```powershell
-python -m venv venv
-.\venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
 **🍎 FOR MAC / LINUX USERS:**
 ```bash
-python3 -m venv venv
-source venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
-*(Note: If you prefer Conda, you can use `conda create -n luminai python=3.10` and `conda activate luminai` instead of venv).*
+*(Note for Technical Reviewers: If you prefer using virtual environments, feel free to run `python -m venv venv` or `conda create -n luminai python=3.10` and activate it before installing requirements).*
 
 ### 2. Launch the Gradio Interface
-Run the main Python application:
+Run the main application. This will generate a local web link (typically `http://127.0.0.1:7860`). Open that address in your web browser:
+
+**💻 FOR WINDOWS USERS:**
 ```powershell
 python Lumin.py
 ```
-Open the local address printed by Gradio (typically `http://127.0.0.1:7860`) in your web browser.
+
+**🍎 FOR MAC / LINUX USERS:**
+```bash
+python3 Lumin.py
+```
 
 ### 3. Live Push Notifications via ntfy.sh (Zero Setup)
 In addition to simulated console logs, the system automatically broadcasts a live push notification for every Severe case using `ntfy.sh`. 
