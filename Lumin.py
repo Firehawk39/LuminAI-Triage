@@ -11,7 +11,7 @@ import datetime
 # ---------------------------------------------------------
 # Configuration & Backend Webhook Routing
 # ---------------------------------------------------------
-# The n8n Webhook Endpoint hosted via zrok
+# The n8n Webhook Endpoint hosted via a public tunnel
 N8N_WEBHOOK_URL = os.getenv("N8N_WEBHOOK_URL", "https://sopranosn8n.share.zrok.io/webhook/triage")
 
 # Default SMTP & Email Settings (Interviewers can swap directly in code here or via GUI)
@@ -217,7 +217,7 @@ def transcribe_audio(audio_path):
 
 def call_triage_backend(patient_text, chat_history):
     """
-    Calls the zrok-hosted n8n webhook backend.
+    Calls the publicly hosted n8n webhook backend.
     """
     try:
         print(f"[Backend] Sending payload to n8n Webhook: {N8N_WEBHOOK_URL}")
@@ -248,7 +248,7 @@ def call_triage_backend(patient_text, chat_history):
     except Exception as e:
         print(f"[Backend] Connection to n8n failed: {e}")
         return (
-            "I am sorry, but the frontline triage backend is currently unreachable. Please verify that the n8n zrok webhook is active and try again.",
+            "I am sorry, but the frontline triage backend is currently unreachable. Please verify that the public n8n webhook is active and try again.",
             "System Error",
             "N/A",
             None

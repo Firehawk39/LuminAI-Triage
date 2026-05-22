@@ -2,7 +2,7 @@
 
 This document provides detailed, end-to-end clinical input and output flows demonstrating how the **LuminAI Triage** agentic triage network handles patient symptoms. These examples showcase the full conversation, automated condition classification, severity assessment, custom home-care or emergency guidance, structured case summaries, and Doctor SMTP dispatch alerts.
 
-All tests below are verified against the zrok-hosted **n8n workflow backend** powered by the **local `medgemma:4b` medical model**.
+All tests below are verified against the publicly hosted **n8n workflow backend** powered by the **local `medgemma:4b` medical model**.
 
 ---
 

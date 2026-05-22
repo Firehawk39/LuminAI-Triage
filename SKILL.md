@@ -60,15 +60,15 @@ This document explains the core technical skills, models, tools, libraries, and 
   | Webhook Response | Returns JSON response to Gradio frontend |
 
 ### push_workflow.py (Developer Infrastructure Script)
-- Programmatically built and deployed the entire n8n visual workflow via the n8n REST API to the hosted zrok instance.
+- Programmatically built and deployed the entire n8n visual workflow via the n8n REST API to the public tunnel instance.
 - This script acts as Infrastructure-as-Code (IaC) to guarantee the workflow was deployed flawlessly to the backend, removing any need for manual GUI configuration.
 
 ---
 
 ## 🌐 Networking
 
-### zrok (Secure Public Tunnel)
-- **Why:** n8n runs locally on port `5678`. zrok exposes it securely to the internet via `https://sopranosn8n.share.zrok.io`, allowing the Gradio frontend (also local) and automated tests to reach the webhook from any network.
+### Secure Public Tunnel
+- **Why:** n8n runs locally on port `5678`. A secure public tunnel exposes it to the internet via `https://sopranosn8n.share.zrok.io`, allowing the Gradio frontend (also local) and automated tests to reach the webhook from any network.
 - **Alternative:** Similar in purpose to `ngrok`, but open-source.
 
 ### requests
@@ -98,7 +98,7 @@ This document explains the core technical skills, models, tools, libraries, and 
   2. Severe Fever Emergency
   3. Out-of-Scope Routing
   4. Clinical Safety Override (emergency keyword detection)
-- Tests target the live zrok webhook, making them true integration tests of the full agentic pipeline.
+- Tests target the live public webhook, making them true integration tests of the full agentic pipeline.
 
 ---
 
