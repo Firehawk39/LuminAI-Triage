@@ -1,0 +1,26 @@
+HOW TO RUN LUMINAI TRIAGE (Quick Start)
+=======================================
+
+No complex setup is required! Choose your operating system below:
+
+💻 FOR WINDOWS USERS:
+---------------------
+1. Open Command Prompt or PowerShell in this exact folder.
+2. Type this and hit Enter to install tools:
+   > pip install -r requirements.txt
+3. Type this and hit Enter to start the app:
+   > python Lumin.py
+
+🍎 FOR MAC / LINUX USERS:
+-------------------------
+1. Open Terminal in this exact folder.
+2. Type this and hit Enter to install tools:
+   > pip3 install -r requirements.txt
+3. Type this and hit Enter to start the app:
+   > python3 Lumin.py
+
+✅ THAT'S IT! 
+Your terminal will give you a local web link (like http://127.0.0.1:7860). Just click that link to open the app in your browser!
+
+---------------------------------------------------------
+*Note for Technical Reviewers: If you prefer using virtual environments, feel free to run `python -m venv venv` (Windows) or `python3 -m venv venv` (Mac) and activate it before installing requirements. The n8n backend is already hosted securely, so no local deployment is needed.*
